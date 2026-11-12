@@ -1,0 +1,63 @@
+/* Photography and theme controls */
+.home-hero{background:linear-gradient(90deg,rgba(23,39,81,.97) 0%,rgba(31,50,104,.91) 40%,rgba(37,44,98,.57) 100%),url('/images/city-lights.jpg') center 58%/cover}.home-hero:before{background:linear-gradient(110deg,transparent 35%,#566ae022 70%,transparent)}.home-feature{display:grid;grid-template-columns:1fr 42%;overflow:hidden;min-height:190px;margin-top:23px;border:1px solid #e4eaf5;border-radius:13px;background:#f3f7fc}.home-feature-copy{padding:27px 30px}.home-feature-copy>span{color:#6683a7;font-size:11px}.home-feature h2{font-size:20px;font-weight:400;color:#31415f;margin:8px 0}.home-feature p{font-size:12px;color:#6d829b;line-height:1.6;max-width:380px}.home-feature button{display:inline-flex;align-items:center;gap:12px;margin-top:17px;border:0;background:transparent;color:#5367c6;font-weight:500;padding:0}.home-feature button:hover{color:#303eaa}.home-feature-photo{background:linear-gradient(90deg,#f3f7fc00,#132a3844),url('/images/network-cables.jpg') center/cover}.theme-toggle{position:relative;display:flex;align-items:center;gap:10px;margin:27px 9px 0;padding:9px 10px;border:1px solid #e4e9f6;border-radius:9px;background:#f8f9ff;color:#586d91;font-size:11px;text-align:left}.theme-toggle span{flex:1}.theme-toggle i{width:25px;height:14px;border-radius:20px;background:#cbd3e5;position:relative}.theme-toggle i:after{content:'';width:10px;height:10px;position:absolute;left:2px;top:2px;border-radius:50%;background:white;transition:transform .2s}.theme-toggle[aria-pressed=true] i{background:#8275f1}.theme-toggle[aria-pressed=true] i:after{transform:translateX(11px)}.nav-label{margin-top:27px}
+/* Dark palette. Original floor plans and signal colors remain unmodified. */
+[data-theme=dark]{color-scheme:dark;--ink:#e1e8fa;--muted:#a0aec7;--blue:#a7b7ff;--line:#303c55;--paper:#1a2539;--focus:#a9b5ff;background:#0d1423;color:#dce5f7}
+[data-theme=dark] body{background:#0d1423;color:#dce5f7}
+[data-theme=dark] .sidebar{background:#111a2b;border-color:#27334b}
+[data-theme=dark] .brand,[data-theme=dark] h1,[data-theme=dark] h2,[data-theme=dark] h3{color:#e1e8fa}
+[data-theme=dark] .brand-mark,[data-theme=dark] .local-symbol{background:#273154;color:#b3bdff}
+[data-theme=dark] .brand small,[data-theme=dark] .nav-label,[data-theme=dark] .breadcrumb,[data-theme=dark] .page-intro,[data-theme=dark] .sidebar-bottom,[data-theme=dark] .sidebar-bottom small{color:#98a8c2}
+[data-theme=dark] .nav-item{color:#a5b5cf}
+[data-theme=dark] .nav-item:hover{background:#202b43}
+[data-theme=dark] .nav-item.active{background:linear-gradient(100deg,#30315b,#25385a);color:#d9dfff}
+[data-theme=dark] .nav-item.active svg{color:#b9b7ff}
+[data-theme=dark] .theme-toggle{background:#202b41;border-color:#34415a;color:#d3dff5}
+[data-theme=dark] .surface{background:#1a2539;border-color:#303c55;box-shadow:0 8px 25px #0002}
+[data-theme=dark] .signal-panel,[data-theme=dark] .connection-panel,[data-theme=dark] .channel-panel{background:#1a2539}
+[data-theme=dark] .signal-panel,[data-theme=dark] .diagnostics,[data-theme=dark] .walking-map-panel,[data-theme=dark] .map-panel,[data-theme=dark] .packet-journey,[data-theme=dark] .route-map,[data-theme=dark] .networks-table{border-top-color:#6d79c8}
+[data-theme=dark] .button.secondary,[data-theme=dark] .button.quiet{background:#27334b;border-color:#43516e;color:#d2dcf2}
+[data-theme=dark] .button.secondary:hover,[data-theme=dark] .button.quiet:hover,[data-theme=dark] .icon-button:hover{background:#35445f;color:#edf1ff}
+[data-theme=dark] input,[data-theme=dark] select,[data-theme=dark] .test-form input,[data-theme=dark] .select-survey select{background:#111c2f;color:#e1e8fa;border-color:#46536d}
+[data-theme=dark] input::placeholder{color:#8796ae}
+[data-theme=dark] .segmented,[data-theme=dark] .spectrum-bands{background:#111c2f;border-color:#344159}
+[data-theme=dark] .segmented button,[data-theme=dark] .spectrum-bands button{color:#afbed8}
+[data-theme=dark] .segmented button.selected,[data-theme=dark] .spectrum-bands button.active{background:#394663;color:#eef2ff}
+[data-theme=dark] .home-topline,[data-theme=dark] .home-section-heading p,[data-theme=dark] .home-section-heading>span{color:#a8b7d0}
+[data-theme=dark] .home-hero h1{color:#fff}[data-theme=dark] .home-hero h1 span{color:#e0e7ff}
+[data-theme=dark] .home-snapshot,[data-theme=dark] .home-tool{background:#1a2539;border-color:#303c55;box-shadow:none}
+[data-theme=dark] .home-tool:hover{background:#243149;border-color:#5a658b}
+[data-theme=dark] .snapshot-cell{border-color:#34415a}
+[data-theme=dark] .snapshot-cell strong,[data-theme=dark] .home-tool-copy strong,[data-theme=dark] .home-section-heading h2{color:#e1e8fa}
+[data-theme=dark] .snapshot-cell span:not(.snapshot-icon),[data-theme=dark] .home-tool-copy small{color:#a7b7d0}
+[data-theme=dark] .snapshot-action,[data-theme=dark] .snapshot-icon,[data-theme=dark] .home-tool-icon{background:#2b3855;color:#bed0ff}
+[data-theme=dark] .tool-aqua .home-tool-icon{color:#8ce1db}[data-theme=dark] .tool-violet .home-tool-icon{color:#cbb9ff}[data-theme=dark] .tool-orange .home-tool-icon{color:#ffbe8e}[data-theme=dark] .tool-pink .home-tool-icon{color:#ffaacc}[data-theme=dark] .tool-green .home-tool-icon{color:#95e5b7}
+[data-theme=dark] .home-feature,[data-theme=dark] .home-recent{background:#202c42;border-color:#34425b}
+[data-theme=dark] .home-feature h2,[data-theme=dark] .home-recent h2{color:#e3eaff}
+[data-theme=dark] .home-feature p,[data-theme=dark] .home-feature-copy>span,[data-theme=dark] .home-recent p,[data-theme=dark] .home-recent>div>span{color:#a8b9d1}
+[data-theme=dark] .home-feature button{color:#bcc8ff}[data-theme=dark] .home-recent button,[data-theme=dark] .recent-illustration{background:#34425e;border-color:#50607d;color:#d8e2ff}
+[data-theme=dark] .home-error,[data-theme=dark] .inline-error{background:#4a302e;color:#ffd1bb;border-color:#6a4541}
+[data-theme=dark] .info-notice{background:#213954;color:#c4dff6;border-color:#365773}[data-theme=dark] .success-notice{background:#1c4036;color:#b6e9d0}
+[data-theme=dark] .panel-title p,[data-theme=dark] .packet-panel-head p,[data-theme=dark] .diagnostics-heading>div>p,[data-theme=dark] .chart-caption,[data-theme=dark] .map-note,[data-theme=dark] .subtle-note,[data-theme=dark] .packet-footnote,[data-theme=dark] .signal-explanation p,[data-theme=dark] .guide-intro p{color:#aabbd3}
+[data-theme=dark] .reading-value,[data-theme=dark] .test-result p,[data-theme=dark] .survey-stats p,[data-theme=dark] .walk-current>p,[data-theme=dark] .network-name p,[data-theme=dark] .channel-recommendation>p{color:#e0e9ff}
+[data-theme=dark] .connection-facts dt,[data-theme=dark] .packet-fields dt,[data-theme=dark] .route-detail dt,[data-theme=dark] th,[data-theme=dark] .signal-panel h2{color:#a7b8d0}
+[data-theme=dark] .connection-facts dd,[data-theme=dark] .packet-fields dd,[data-theme=dark] .route-detail dd,[data-theme=dark] td,[data-theme=dark] .network-row-title,[data-theme=dark] .location-name{color:#d1dcf0}
+[data-theme=dark] .network-disc,[data-theme=dark] .packet-control-icon,[data-theme=dark] .route-icon-box,[data-theme=dark] .journey-icon,[data-theme=dark] .route-device,[data-theme=dark] .route-destination-icon,[data-theme=dark] .walk-setup-icon{background:#303d5a;color:#b9c9ed}
+[data-theme=dark] .survey-guide{background:linear-gradient(110deg,#253052,#203b4a);border-color:#384963}
+[data-theme=dark] .guide-intro h2,[data-theme=dark] .guide-actions strong{color:#e4eaff}[data-theme=dark] .guide-actions button{background:#263550;border-color:#455470;color:#dbe4f8}[data-theme=dark] .guide-actions button:hover{background:#34435f}[data-theme=dark] .guide-icon{background:#3c4a6a;color:#bed0ff}
+[data-theme=dark] .route-hop,[data-theme=dark] .route-hop.unanswered,[data-theme=dark] .route-destination-summary,[data-theme=dark] .domain-examples button,[data-theme=dark] .walk-modes>label{background:#202e45;border-color:#3b4a64;color:#c2d2e8}
+[data-theme=dark] .route-hop.selected,[data-theme=dark] .domain-examples button.chosen,[data-theme=dark] .domain-examples button:hover,[data-theme=dark] .walk-modes>label.chosen{background:#33435e;border-color:#7488b1}
+[data-theme=dark] .route-start-node strong,[data-theme=dark] .route-hop-main strong,[data-theme=dark] .route-destination-summary strong,[data-theme=dark] .route-destination-node strong,[data-theme=dark] .journey-node strong,[data-theme=dark] .network-notes h3,[data-theme=dark] .route-education h3{color:#d9e5f7}
+[data-theme=dark] .route-state,[data-theme=dark] .packet-phase,[data-theme=dark] .path-line span,[data-theme=dark] code,[data-theme=dark] .map-source{background:#2a3851;color:#c1d1e8}
+[data-theme=dark] .route-reached,[data-theme=dark] .route-detail-badge,[data-theme=dark] .packet-result-badge,[data-theme=dark] .destination-state.reached{background:#21493f;color:#aee6c9}
+[data-theme=dark] .route-not-reached,[data-theme=dark] .route-detail-badge.missing,[data-theme=dark] .packet-result-badge.no_reply,[data-theme=dark] .destination-state{background:#493c2c;color:#f0cc98}
+[data-theme=dark] .timeline-row:hover,[data-theme=dark] .timeline-row.selected,[data-theme=dark] .hop-timing-item:hover,[data-theme=dark] .hop-timing-item.selected,[data-theme=dark] .latency-bar-item:hover,[data-theme=dark] .latency-bar-item.selected{background:#2a3952}
+[data-theme=dark] .channel-track{background:#344158}[data-theme=dark] .chart-grid,[data-theme=dark] .spectrum-grid{stroke:#40506a}[data-theme=dark] .axis-label,[data-theme=dark] .spectrum-axis{fill:#b1c0d7}
+[data-theme=dark] .blank-plan{background-color:#151e32;background-image:linear-gradient(#2f3b51 1px,transparent 1px),linear-gradient(90deg,#2f3b51 1px,transparent 1px)}
+[data-theme=dark] .travel-map{background:#151e32;border-color:#41506a}[data-theme=dark] .map-legend i.unvisited-key{background:#151e32}
+[data-theme=dark] dialog,[data-theme=dark] .survey-dialog{background:#1a2539;color:#e1e8fa;border-color:#4a5875}[data-theme=dark] .empty-state>h2,[data-theme=dark] .walk-setup-intro h2{color:#dce6f7}
+[data-theme=dark] footer{border-color:#2d394f;color:#9aaac4}
+@media(max-width:650px){.theme-toggle{position:absolute;right:14px;top:15px;margin:0;padding:7px}.theme-toggle span,.theme-toggle i{display:none}.home-feature{grid-template-columns:1fr}.home-feature-photo{min-height:125px;grid-row:1}.home-feature-copy{padding:21px}.nav-label{margin-top:0}}
+
+[data-theme=dark]{--signal-strong:#7ed7b6;--signal-fair:#ffd18b;--signal-weak:#ffadb2}
+[data-theme=dark] .chart-caption,[data-theme=dark] .network-name,[data-theme=dark] .permission-help,[data-theme=dark] .test-results,[data-theme=dark] .coordinate-label,[data-theme=dark] .measurement-extras,[data-theme=dark] th,[data-theme=dark] td,[data-theme=dark] .channel-recommendation,[data-theme=dark] .channel-method,[data-theme=dark] .walk-current,[data-theme=dark] .walk-how,[data-theme=dark] .walk-manual-record,[data-theme=dark] .journey-bottom,[data-theme=dark] .packet-stats,[data-theme=dark] .packet-stats>div,[data-theme=dark] .packet-inspector-note,[data-theme=dark] .timeline-heading,[data-theme=dark] .timeline-row,[data-theme=dark] .network-notes>div,[data-theme=dark] .trace-title,[data-theme=dark] .route-map-footer,[data-theme=dark] .route-detail-note,[data-theme=dark] .route-education>div,[data-theme=dark] .route-destination-node,[data-theme=dark] .spectrum-footer,[data-theme=dark] .sidebar-bottom{border-color:#35435c}
+[data-theme=dark] .empty-packet-icon,[data-theme=dark] .empty-map{background:#2d3a55;border-color:#475572;color:#b8c9e6}[data-theme=dark] .empty-map:before{border-color:#475572}[data-theme=dark] .packet-stats p,[data-theme=dark] .test-result p{color:#dce8ff}[data-theme=dark] .trace path[stroke="#287dae"]{stroke:#7aafff}[data-theme=dark] .scale-heading,[data-theme=dark] .trace-title,[data-theme=dark] .scale-heading>span:first-child,[data-theme=dark] .trace-title>span:first-child{color:#a7bdd3}
