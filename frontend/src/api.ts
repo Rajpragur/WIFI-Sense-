@@ -9,7 +9,7 @@ export async function api<T>(path: string, init: RequestInit = {}): Promise<T> {
 }
 export const json = (data: unknown, method = 'POST'): RequestInit => ({method, body: JSON.stringify(data)});
 export const signalLabel = (rssi: number) => rssi >= -60 ? 'Strong' : rssi >= -75 ? 'Fair' : 'Weak';
-export const signalColor = (rssi: number) => rssi >= -60 ? '#25876c' : rssi >= -75 ? '#ad7828' : '#bf5c59';
+export const signalColor = (rssi: number) => rssi >= -60 ? 'var(--signal-strong, #25876c)' : rssi >= -75 ? 'var(--signal-fair, #ad7828)' : 'var(--signal-weak, #bf5c59)';
 export function download(data: unknown, filename: string) {
  const url = URL.createObjectURL(new Blob([JSON.stringify(data, null, 2)], {type: 'application/json'}));
  const anchor = document.createElement('a'); anchor.href = url; anchor.download = filename; anchor.click();
