@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0"><dict>
+<key>CFBundleName</key><string>WiFiSense Collector</string>
+<key>CFBundleDisplayName</key><string>WiFiSense Collector</string>
+<key>CFBundleIdentifier</key><string>in.rajpragur.wifisense.collector</string>
+<key>CFBundleExecutable</key><string>WiFiSenseCollector</string>
+<key>CFBundlePackageType</key><string>APPL</string>
+<key>CFBundleVersion</key><string>1</string>
+<key>CFBundleShortVersionString</key><string>1.0</string>
+<key>NSHighResolutionCapable</key><true/>
+<key>NSLocationUsageDescription</key><string>WiFiSense uses location permission to read nearby Wi-Fi names and access-point identifiers. It does not record your location while scanning.</string>
+<key>NSLocationWhenInUseUsageDescription</key><string>WiFiSense uses location permission to read nearby Wi-Fi names and access-point identifiers. It does not record your location while scanning.</string>
+<key>NSLocationAlwaysAndWhenInUseUsageDescription</key><string>WiFiSense uses location permission to read nearby Wi-Fi names and access-point identifiers. It does not record your location while scanning.</string>
+</dict></plist>

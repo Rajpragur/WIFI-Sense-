@@ -1,0 +1,10 @@
+.venv/
+frontend/node_modules/
+frontend/dist/
+frontend/*.tsbuildinfo
+agent/wifisense-agent
+wifisense.db*
+__pycache__/
+.pytest_cache/
+agent/WiFiSense Collector.app/
+agent/runtime/
