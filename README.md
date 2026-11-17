@@ -119,3 +119,4 @@ Traceroute sends separate probes; this is not the complete path of one captured 
 - City skyline: [fu zhichao on Pexels](https://www.pexels.com/photo/city-buildings-aerial-view-593840/).
 - Network cabling: [Brett Sayles on Pexels](https://www.pexels.com/photo/cables-connected-on-server-2881229/).
 
+Both images are used under the [Pexels license](https://www.pexels.com/license/), stored locally, and are illustrative stock photography.
