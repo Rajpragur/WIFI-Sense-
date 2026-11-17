@@ -192,7 +192,7 @@ def open_collector():
     if not collector_ready():
         raise HTTPException(503, 'The native collector is not built. Run ./setup.sh.')
     if not start_collector(visible=True):
-        raise HTTPException(503, 'Could not open the native collector. Open it from the project agent folder.')
+        raise HTTPException(503, 'Could not open the native collector. Open it from the project collector folder.')
     return {'opened': True}
 
 @app.post('/api/channels')
@@ -204,7 +204,7 @@ def channel_analysis(networks: list[Network]):
 
 @app.get('/api/health')
 def health():
-    return {'status': 'ok', 'agent_ready': collector_ready() or (ROOT / 'agent' / 'wifisense-agent').exists(),
+    return {'status': 'ok', 'agent_ready': collector_ready() or (ROOT / 'collector' / 'wifisense-collector').exists(),
             'iperf_ready': shutil.which('iperf3') is not None, 'storage': 'SQLite', 'mode': 'local'}
 
 @app.get('/api/live')

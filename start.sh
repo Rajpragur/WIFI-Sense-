@@ -14,11 +14,11 @@ for port in (8000, 5173):
         except OSError:
             raise SystemExit(f'Port {port} is already in use. If Wi-FiSense is running, open http://127.0.0.1:5173 instead.')
 PY
-if [ "$(uname -s)" = Darwin ] && { [ ! -x agent/wifisense-agent ] || [ agent/main.swift -nt agent/wifisense-agent ]; }; then
-  swiftc agent/main.swift -o agent/wifisense-agent -framework CoreWLAN
+if [ "$(uname -s)" = Darwin ] && { [ ! -x collector/wifisense-collector ] || [ collector/main.swift -nt collector/wifisense-collector ]; }; then
+  swiftc collector/main.swift -o collector/wifisense-collector -framework CoreWLAN
 fi
-if [ "$(uname -s)" = Darwin ] && { [ ! -x 'agent/WiFiSense Collector.app/Contents/MacOS/WiFiSenseCollector' ] || [ agent/CollectorApp.swift -nt 'agent/WiFiSense Collector.app/Contents/MacOS/WiFiSenseCollector' ] || [ agent/Info.plist -nt 'agent/WiFiSense Collector.app/Contents/Info.plist' ]; }; then
-  agent/build-collector.sh
+if [ "$(uname -s)" = Darwin ] && { [ ! -x 'collector/WiFiSense Collector.app/Contents/MacOS/WiFiSenseCollector' ] || [ collector/CollectorApp.swift -nt 'collector/WiFiSense Collector.app/Contents/MacOS/WiFiSenseCollector' ] || [ collector/Info.plist -nt 'collector/WiFiSense Collector.app/Contents/Info.plist' ]; }; then
+  collector/build-collector.sh
 fi
 (cd backend && ../.venv/bin/uvicorn main:app --host 127.0.0.1 --port 8000) &
 api_pid=$!

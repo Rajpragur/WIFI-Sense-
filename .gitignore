@@ -2,9 +2,9 @@
 frontend/node_modules/
 frontend/dist/
 frontend/*.tsbuildinfo
-agent/wifisense-agent
+collector/wifisense-collector
 wifisense.db*
 __pycache__/
 .pytest_cache/
-agent/WiFiSense Collector.app/
-agent/runtime/
+collector/WiFiSense Collector.app/
+collector/runtime/

@@ -11,10 +11,10 @@ import time
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-AGENT_DIR = ROOT / 'agent'
-APP = AGENT_DIR / 'WiFiSense Collector.app'
-LEGACY = AGENT_DIR / 'wifisense-agent'
-SOCKET_DIR = Path('/tmp') / f"wfs-{os.getuid()}-{hashlib.sha256(str(AGENT_DIR.resolve()).encode()).hexdigest()[:16]}"
+COLLECTOR_DIR = ROOT / 'collector'
+APP = COLLECTOR_DIR / 'WiFiSense Collector.app'
+LEGACY = COLLECTOR_DIR / 'wifisense-collector'
+SOCKET_DIR = Path('/tmp') / f"wfs-{os.getuid()}-{hashlib.sha256(str(COLLECTOR_DIR.resolve()).encode()).hexdigest()[:16]}"
 SOCKET = SOCKET_DIR / 'collector.sock'
 _lock = threading.Lock()
 _last_start = 0.0
