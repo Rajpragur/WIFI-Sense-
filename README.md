@@ -15,9 +15,15 @@ For a fresh checkout on macOS, install Python 3.10+, Node.js 18+ and Xcode comma
 
 Setup creates a local Python virtual environment, installs npm dependencies and compiles the native collector. Start runs the API and dashboard on loopback. Press Ctrl-C to stop. On subsequent starts, a changed native collector is recompiled automatically. The app reports occupied ports instead of moving silently to another address.
 
+## Home dashboard
+
+Use the sidebar theme switch to choose light or dark mode. Your choice is saved in this browser; without a saved choice, the app uses your system theme.
+
+The home dashboard displays the latest real Wi-Fi reading, connection details, saved survey count and shortcuts to each tool. It refreshes its signal reading every five seconds; it does not fabricate values when the collector is unavailable.
+
 ## Live monitor
 
-The home screen reads real RSSI every three seconds. It also displays noise floor, signal-to-noise ratio, channel, frequency band, interface and transmit link rate when provided by macOS. The history trace is built from actual samples; pauses and long gaps are not filled with invented values. Pause/resume and refresh controls are available.
+The live monitor reads real RSSI every three seconds. It also displays noise floor, signal-to-noise ratio, channel, frequency band, interface and transmit link rate when provided by macOS. The history trace is built from actual samples; pauses and long gaps are not filled with invented values. Pause/resume and refresh controls are available.
 
 SSID/BSSID require Location Services permission for **WiFiSense Collector**, separately from browser location permission. If names are missing, open **Nearby networks**, scan, and select **Open Wi-Fi collector**. In the collector window choose **Allow location access…**, accept the macOS prompt, then scan again. If access was denied, use **Open Location Settings** and enable WiFiSense Collector in Privacy & Security → Location Services. The collector uses permission for CoreWLAN identifiers; it does not record geographic coordinates during a Wi-Fi scan.
 
@@ -86,6 +92,7 @@ npm run build --prefix frontend
 - `backend/main.py`: API, validation, measurement tools and persistence.
 - `backend/analysis.py`: conventional survey and channel algorithms.
 - `backend/walking.py`: local coordinates and bounded walking heatmap.
+- `frontend/src/Home.tsx`: home dashboard and live connection overview.
 - `frontend/src/LiveMonitor.tsx`: real-time monitor and network tests.
 - `frontend/src/WalkingHeatmap.tsx`: geolocation workflow and growing map.
 - `frontend/src/SurveyWorkspace.tsx`: floor-plan surveys and comparison.
@@ -106,3 +113,9 @@ The animation is conceptual and not to scale. A signal-by-channel chart uses act
 Open **Route explorer**, enter a domain, website URL or IPv4 address, and press **Trace route**. Google, YouTube, GitHub and Wikipedia are provided as quick choices; any domain with an IPv4 address can be entered. A URL is reduced to its hostname before tracing, and URLs with embedded credentials are rejected. The chosen domain remains visible as the destination, including when it does not respond. The target resolves once to an IPv4 address. The backend runs the system `traceroute` with ICMP probes, one probe per increasing TTL, and streams each hop to the page. The selected hop shows its responding IP, its round-trip time, and a reverse-DNS name when one is available. Export saves only the current trace as JSON. Stop cancels the trace and cleans up its processes.
 
 Traceroute sends separate probes; this is not the complete path of one captured packet. Silent hops can mean a router filtered or ignored a probe, and routes may change. The reported time is round-trip time to that response, not a hop-to-hop delay. A reverse-DNS name is a label for a responding IP address; it is not a list of visited websites or domains through which content passed. Only public addresses are sent to the configured DNS resolver for reverse lookup. On machines without `dig` or with DNS restrictions, names may be unavailable. The prototype supports IPv4 ICMP traceroute only. Run against authorized destinations.
+
+## Photography
+
+- City skyline: [fu zhichao on Pexels](https://www.pexels.com/photo/city-buildings-aerial-view-593840/).
+- Network cabling: [Brett Sayles on Pexels](https://www.pexels.com/photo/cables-connected-on-server-2881229/).
+
